@@ -10,5 +10,5 @@ from loanapp import urls as loanapp_urls
 urlpatterns = [
     
    path('register/',views.register_customer, name='register_customer'),
-  path('loan/',include(loanapp_urls)),
+  path('',include(loanapp_urls)),
 ]
