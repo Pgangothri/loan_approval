@@ -19,7 +19,7 @@ def register_customer(request):
 
         # Prepare response data
         response_data = {
-            'customer_id': customer.id,
+            'customer_id': customer.customer_id,
             'name': f"{customer.first_name} {customer.last_name}",
             'age': customer.age,
             'monthly_income': customer.monthly_income,

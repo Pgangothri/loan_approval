@@ -14,7 +14,7 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Customer',
             fields=[
-                ('customer_id', models.AutoField(primary_key=True, serialize=False)),
+                ('customer_id', models.AutoField(primary_key=True, serialize=True)),
                 ('first_name', models.CharField(max_length=255)),
                 ('last_name', models.CharField(max_length=255)),
                 ('age', models.IntegerField()),

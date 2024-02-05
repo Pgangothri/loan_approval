@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-y9ak22bbti1z(qq4-a4@-o0i4tx9hb4@#w5h&*v3mty^%ge#x@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -51,7 +51,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-
+STATIC_ROOT = '/app/static/'
 ROOT_URLCONF = 'loanproject.urls'
 
 TEMPLATES = [
@@ -76,12 +76,11 @@ WSGI_APPLICATION = 'loanproject.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+#DATABASES = {
+ #   'default': {
+  #     'NAME': BASE_DIR / 'db.sqlite3',
+   # }
+#}
 
 
 # Password validation
@@ -115,14 +114,15 @@ USE_I18N = True
 USE_TZ = True
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'loan',
         'USER': 'postgres',
-        'PASSWORD': 'Surya@2009',
-        'HOST': 'localhost',
-        'PORT': '5432',  # Default PostgreSQL port
+        'PASSWORD': 'Surya@2009',  # Change to your actual password
+        'HOST': 'db',  # Use the service name defined in docker-compose.yml
+        'PORT': '5432',
     }
 }
+
 
 
 # Static files (CSS, JavaScript, Images)
