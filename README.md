@@ -3,6 +3,8 @@
 **Project Overview:**
 
 This project is a credit approval system implemented using Django 4+ and Django Rest Framework. The system assesses credit eligibility based on historical loan data and customer information.
+![Screenshot (80)](https://github.com/Pgangothri/loan_approval/assets/117299815/4c811f73-fe89-408e-9de4-04124fbaa9aa)
+
 
 **Table of Contents:**
 
